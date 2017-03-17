@@ -38,7 +38,7 @@ services:
       restart_policy:
         condition: on-failure
   result:
-    image: jowings/vote_result
+    image: jowings/vote_result:v2
     ports:
       - 5001:80
     networks:
@@ -54,7 +54,7 @@ services:
         condition: on-failure
 
   worker:
-    image: jowings/vote_worker
+    image: jowings/vote_worker:v1
     networks:
       - frontend
       - backend
